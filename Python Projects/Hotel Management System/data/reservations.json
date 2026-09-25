@@ -1,0 +1,43 @@
+{
+    "Cus_Info": [
+        {
+            "Name": "Abdirahman Maslah Amir",
+            "Phone_Number": "252610000000",
+            "Email_Address": "test@fakemail.com",
+            "Document_Type": "Passport",
+            "Document_ID_Number": "P12345678",
+            "Date_Of_Birth": "21/dec/1922",
+            "Number_Of_Nights": 4,
+            "Number_Of_Adults": 1,
+            "Number_Of_Children": 0,
+            "Check-in": "23/Jun/2027",
+            "Check-Out": "27/jun/2027",
+            "Room_Type": "Single Bed",
+            "Room_Number": 156,
+            "Room_Password": "6351",
+            "Floor": 1,
+            "Price_Per_Night": 45.75,
+            "Total_Price": 183.0
+        },
+        {
+            "Name": "as",
+            "Phone_Number": "12334",
+            "Email_Address": "asw",
+            "Document_Type": "Identification Card",
+            "Document_ID_Number": "12345678",
+            "Date_Of_Birth": "12345678901",
+            "Number_Of_Nights": 3,
+            "Number_Of_Adults": 3,
+            "Number_Of_Children": 6,
+            "Check-in": "12345678901",
+            "Check-Out": "12345678912",
+            "Room_Type": "Twin Bed",
+            "Room_Number": 52,
+            "Room_Password": "4579",
+            "Floor": 3,
+            "Price_Per_Night": 69.99,
+            "Reference_Number": "28389",
+            "Total_Price": 209.96999999999997
+        }
+    ]
+}

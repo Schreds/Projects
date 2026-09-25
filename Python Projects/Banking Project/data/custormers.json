@@ -1,0 +1,162 @@
+{
+    "info": [
+        {
+            "Account_Info": [
+                {
+                    "Name": "User",
+                    "Email Address": "fake@gmail.com",
+                    "Phone Number": "252610000000",
+                    "DOB": "01/02/1966",
+                    "POB": "Test, Test",
+                    "Address": "Kismayo, Somalia",
+                    "Username": "test",
+                    "Password": "123",
+                    "Registration Date": "17-Sep-2026 15:36:19",
+                    "master": [
+                        {
+                            "Account_Number": "56981374",
+                            "Com_Account_Number": "569813746106",
+                            "balance": 1576.85,
+                            "pin": "123456",
+                            "Cards": [
+                                {
+                                    "Card_Type": "Debit Mastercard",
+                                    "Card_Number": "5245315245329250",
+                                    "Expiring_Date": "09/36",
+                                    "CVV": "235",
+                                    "Card_Holder_Name": "User",
+                                    "Credit_Block": false
+                                },
+                                {
+                                    "Card_Type": "Visa",
+                                    "Card_Number": "4257086402719684",
+                                    "Expiring_Date": "12/37",
+                                    "CVV": "614",
+                                    "Card_Holder_Name": "User",
+                                    "Credit_Limit": 5000,
+                                    "Used_Credit": 0,
+                                    "Debt": 0,
+                                    "Interest_Rate": 0.1,
+                                    "Credit_Limit_Lock": false,
+                                    "Credit_Block": true
+                                }
+                            ]
+                        }
+                    ],
+                    "Transaction_History": [
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Account_Number": "922178296593",
+                            "Amount_Transferred": 340.0,
+                            "Date": "23-Sep-2026 12:59:46",
+                            "Reference_Number": 15957,
+                            "Transferring_Service": "International",
+                            "Transfer_Fees": 23.8
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Incoming",
+                            "Account_Number": "92217829",
+                            "Amount_Transferred": 20.0,
+                            "Date": "23-Sep-2026 13:03:12",
+                            "Reference_Number": 95289,
+                            "Transferring_Service": "Local",
+                            "Transfer_Fees": 0.0
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Incoming",
+                            "Account_Number": "92217829",
+                            "Amount_Transferred": 320.0,
+                            "Date": "23-Sep-2026 13:04:44",
+                            "Reference_Number": 173,
+                            "Transferring_Service": "Local",
+                            "Transfer_Fees": 0.0
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Incoming",
+                            "Account_Number": "922178296593",
+                            "Amount_Transferred": 100.0,
+                            "Date": "23-Sep-2026 13:05:28",
+                            "Reference_Number": 43316,
+                            "Transferring_Service": "International",
+                            "Transfer_Fees": 7.0
+                        }
+                    ]
+                },
+                {
+                    "Name": "Abood Murphy",
+                    "Email Address": "kinda@gmail.com",
+                    "Phone Number": "252610000000",
+                    "DOB": "01/jan/1977",
+                    "POB": "Test, Unknown",
+                    "Address": "123 street ave kiro",
+                    "Username": "Schreds",
+                    "Password": "KindaFurry",
+                    "Registration Date": "23-Sep-2026 11:59:12",
+                    "master": [
+                        {
+                            "Account_Number": "92217829",
+                            "Com_Account_Number": "922178296593",
+                            "balance": 300.0,
+                            "pin": "932837",
+                            "Cards": [
+                                {
+                                    "Card_Type": "Debit Mastercard",
+                                    "Card_Number": "5209441478352925",
+                                    "Expiring_Date": "03/33",
+                                    "CVV": "120",
+                                    "Card_Holder_Name": "Abood",
+                                    "Credit_Limit_Lock": false,
+                                    "Credit_Block": true
+                                }
+                            ]
+                        }
+                    ],
+                    "Transaction_History": [
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Incoming",
+                            "Account_Number": "569813746106",
+                            "Amount_Transferred": 340.0,
+                            "Date": "23-Sep-2026 12:59:46",
+                            "Reference_Number": 15957,
+                            "Transferring_Service": "International",
+                            "Transfer_Fees": 23.8
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Outgoing",
+                            "Account_Number": "56981374",
+                            "Amount_Transferred": 20.0,
+                            "Date": "23-Sep-2026 13:03:12",
+                            "Reference_Number": 95289,
+                            "Transferring_Service": "Local",
+                            "Transfer_Fees": 0.0
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Transaction_Direction": "Outgoing",
+                            "Account_Number": "56981374",
+                            "Amount_Transferred": 320.0,
+                            "Date": "23-Sep-2026 13:04:44",
+                            "Reference_Number": 173,
+                            "Transferring_Service": "Local",
+                            "Transfer_Fees": 0.0
+                        },
+                        {
+                            "Transaction_Type": "Transfer",
+                            "Account_Number": "569813746106",
+                            "Amount_Transferred": 100.0,
+                            "Date": "23-Sep-2026 13:05:28",
+                            "Reference_Number": 43316,
+                            "Transferring_Service": "International",
+                            "Transfer_Fees": 7.0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

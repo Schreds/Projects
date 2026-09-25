@@ -1,0 +1,40 @@
+{
+    "Debug": [
+        {
+            "username": "Test",
+            "password": "Debug"
+        }
+    ],
+    "admin": [
+        {
+            "username": "Debugger",
+            "password": "DeTest"
+        },
+        {
+            "username": "Schrader",
+            "password": "9912342"
+        }
+    ],
+    "info": [
+        {
+            "web": "none",
+            "username": "Schreds",
+            "password": "laptop@1234"
+        },
+        {
+            "web": "www.google.com",
+            "username": "LesterJazz",
+            "password": "Guyonthebulding@Good"
+        },
+        {
+            "web": "www.wikipedia.com",
+            "username": "jackson@gmail.com",
+            "password": "12345678hg"
+        },
+        {
+            "web": "www.youtube.com",
+            "username": "jacksonboss@gmail.com",
+            "password": "lookatthewindow@9337"
+        }
+    ]
+}

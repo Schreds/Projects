@@ -1,0 +1,14 @@
+This project is huge and has a lot of potentials, but currently i will use it as a study project where when i learn new stuff i will use it within this project.
+Features: 
+1. Open Bank Account and use it.
+2. Transfer Funds to local accounts. Account number must be exactly 8 digits to work.
+3. Transfer Funds to International  accounts, Account number must be exactly 12 digits to work.
+4. Change your old pin
+5. View Available Balance
+6. View Transaction History
+7. View your account Number both local and international
+Note: This project is not real it's just simulation of how banks work and nothing in this project leads to real info. 
+If you are curious on how this project works and wanna test it out. use these login credentials to login: - 
+Username: test
+Password: 123
+Make sure to run Main.py, not the others.
