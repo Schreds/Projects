@@ -1,0 +1,20 @@
+[
+    {
+        "Worker_ID": "WR-14991",
+        "Name": "Ahmed Mohamed",
+        "Age": 18,
+        "Gender": "male",
+        "Occupation": "Janitor",
+        "Security_Level": 1,
+        "Active": true
+    },
+    {
+        "Worker_ID": "WR-13477",
+        "Name": "Sophie Johnson",
+        "Age": 19,
+        "Gender": "female",
+        "Occupation": "Guard",
+        "Security_Level": 2,
+        "Active": true
+    }
+]
