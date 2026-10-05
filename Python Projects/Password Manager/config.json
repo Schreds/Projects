@@ -11,8 +11,8 @@
             "password": "DeTest"
         },
         {
-            "username": "Schrader",
-            "password": "9912342"
+            "username": "123",
+            "password": "123"
         }
     ],
     "info": [
@@ -32,9 +32,9 @@
             "password": "12345678hg"
         },
         {
-            "web": "www.youtube.com",
-            "username": "jacksonboss@gmail.com",
-            "password": "lookatthewindow@9337"
+            "web": "www.google.com",
+            "username": "Schreds@gmail.com",
+            "password": "KindaHandsome@9337"
         }
     ]
 }

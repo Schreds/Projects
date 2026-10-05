@@ -1,4 +1,6 @@
 import json
+import string
+import random
 
 def load():
     with open("config.json", "r") as file:
@@ -7,7 +9,6 @@ def save(data):
     with open("config.json", "w") as file:
         json.dump(data, file, indent = 4)
 data = load()
-
 
 def admin_dash():
     usern = input("Enter Your Username: ")
@@ -30,7 +31,12 @@ def edit():
         print("2. Edit Saved Passwords")
         print("3. Delete Passwords")
         print("4. Create New Passwords")
-        k = int(input("Choose a number: "))
+        print("5. Generate a password")
+        print("6. Verify If a Password is strong")
+        try:
+            k = int(input("Choose a number: "))
+        except ValueError:
+            print("Invalid Choice, Please Choose Between 1-6")
         if k == 1:
             for number, io in enumerate(data["info"], start = 1):
                 print(f"{number}, Account")
@@ -89,11 +95,16 @@ def edit():
                 print("done")
                 save(data)
             else:
-                print("Either Username and Password Can not be empty")
+               print("Either Username and Password Can not be empty")
+        elif k == 5:
+            password_generator()
+        elif k == 6:
+            password_checker()
         else:
             print("Number doesn't Exist")
-        ask = input("Press Q to quit or Enter to Continue: ")
+        ask = input("Press Q to quit or Enter to Continue: ").lower()
         if ask == "q":
+            print("Program Closed")
             running = False
 
 def debug():
@@ -164,6 +175,33 @@ def debug():
         qes = input("Press Q to quit or Enter to Continue: ").lower()
         if qes == "q":
             run = False
+
+def password_generator():
+    stuff = "@/.#$%&*\\!+-_="+ string.digits + string.ascii_letters
+    key = list(stuff)
+    random.shuffle(key)
+    password = "".join(key[0:12])
+    print(f"This is Your Random Password: {password}")
+    return password
+
+def password_checker():
+    print("Password Should Have:" "\n1. Special Character", "2. Digits", "3. Uppercase", sep="\n")
+    chekker = input("Enter a Password: ")
+    is_upper = False
+    is_digit = False
+    is_special = False
+
+    for char in chekker:
+        if char.isupper():
+            is_upper = True
+        elif char.isdigit():
+            is_digit = True
+        elif not char.isalnum():
+            is_special = True
+    if len(chekker) >= 8 and is_upper and is_digit and is_special:
+        print(f"Your Password : {chekker}, Is Strong.")
+    else:
+        print(f"Your Password : {chekker}, Is Weak")
 
 
 login = admin_dash()
