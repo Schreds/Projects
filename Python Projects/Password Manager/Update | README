@@ -1,0 +1,8 @@
+I know i said that this project is 100% done, but i just learned new stuff and i decided to add those features here, as i'm learning i will be adding everything i learn if its useful to my projects.
+What did i add to this project?
+- Password Generator
+- Password Strnegth Checker
+The Password Generator, Generates a random password that consists of: string, digits and special characters like (@,!,#,$,%,/).
+The Password Strength Checker Checks if your password is strong or weak, it check for this three things to determine if it's strong or not: does it have uppercase?, does the password contains digits?, does the password contain special character? if yes then the password is strong, if not then it's weak.
+
+That's what the update consists of today and there might be more but it depends on the new thing i learn.
