@@ -1,0 +1,22 @@
+[
+    {
+        "Name": "Abood",
+        "Age": "01/Dec/1945",
+        "Username": "123",
+        "Password": "123",
+        "PIN": "1234",
+        "Phone_Number": "615333949",
+        "Balance": 150.67,
+        "Registeration_Date": "14-Oct-2026 14:02:27"
+    },
+    {
+        "Name": "Abdirahman Maslah Amir",
+        "Age": "01/Dec/2045",
+        "Username": "Kinda",
+        "Password": "12345678",
+        "PIN": "283711",
+        "Phone_Number": "617413256",
+        "Balance": 0.0,
+        "Registeration_Date": "15-Oct-2026 11:27:35"
+    }
+]
