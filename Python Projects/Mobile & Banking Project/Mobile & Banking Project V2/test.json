@@ -1,22 +1,48 @@
 [
     {
-        "Name": "Abood",
-        "Age": "01/Dec/1945",
+        "Name": "a",
+        "Age": "12345678911",
         "Username": "123",
         "Password": "123",
         "PIN": "1234",
-        "Phone_Number": "615333949",
-        "Balance": 150.67,
-        "Registeration_Date": "14-Oct-2026 14:02:27"
+        "Phone_Number": "611199702",
+        "Balance": 270.0,
+        "Bank_Accounts": true,
+        "Registeration_Date": "16-Oct-2026 16:06:49",
+        "Misc": [
+            {
+                "First_Name": "Abood",
+                "Last_Name": "Murphy",
+                "Age": "12345678911",
+                "Account_PIN": "12",
+                "Account_Balance": 20.0,
+                "Account_Number": "41485336",
+                "Account_Lock": false,
+                "Account_Registration_Date": "16-Oct-2026 20:00:19"
+            }
+        ]
     },
     {
-        "Name": "Abdirahman Maslah Amir",
-        "Age": "01/Dec/2045",
-        "Username": "Kinda",
-        "Password": "12345678",
-        "PIN": "283711",
-        "Phone_Number": "617413256",
-        "Balance": 0.0,
-        "Registeration_Date": "15-Oct-2026 11:27:35"
+        "Name": "Murphy Schrader",
+        "Age": "12345678911",
+        "Username": "Kindro",
+        "Password": "123",
+        "PIN": "1234",
+        "Phone_Number": "612247303",
+        "Balance": 120.0,
+        "Bank_Accounts": true,
+        "Registeration_Date": "16-Oct-2026 20:15:39",
+        "Misc": [
+            {
+                "First_Name": "Kindro",
+                "Last_Name": "Moselini",
+                "Age": "26/Oct/1889",
+                "Account_PIN": "123",
+                "Account_Balance": 100.0,
+                "Account_Number": "02041094",
+                "Account_Lock": true,
+                "Account_Registration_Date": "17-Oct-2026 18:49:39"
+            }
+        ]
     }
 ]
