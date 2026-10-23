@@ -4,5 +4,6 @@
 4. Message Encrypted is completed.
 5. Hotel Management System not completed a lot is missing.
 6. Banking Project Not completed, Regular updates are coming
-7. Calculator & Temperature Converter is Completed 
+7. Calculator & Temperature Converter is Completed
+8. Mobile& Banking System V2.2 Was Just release. Two Features Needs to be added.
 100% Completed projects might get small update but not guaranteed.
