@@ -27,6 +27,7 @@ class Account():
         self.phone = self.phone_generate()
         self._balance = 0.0
         self.Bank_Accounts = False
+        self.banned = False
         self.creation_date = datetime.now().strftime("%d-%b-%Y %H:%M:%S")
 
     #Create Random Phone Number
@@ -63,6 +64,7 @@ class Account():
             "Phone_Number": self.phone,
             "Balance": self.balance,
             "Bank_Accounts": self.Bank_Accounts,
+            "Banned": self.banned,
             "Registeration_Date": self.creation_date,
             "Misc": []
         }
@@ -150,6 +152,9 @@ def login():
         print("Invalid Username")
         return
     entered_pass = input("Enter Your Password: ")
+    if account_info["Banned"]:
+        print("\nYour Account Is Suspended, Please Contact Support Team.")
+        return
     account = Account(
         account_info["Name"],
         account_info["Age"],
@@ -161,7 +166,7 @@ def login():
     account.phone = account_info["Phone_Number"]
     account.balance = account_info["Balance"]
     account.Bank_Accounts = account_info["Bank_Accounts"]
-    account.name = account_info["Name"]
+    account.banned = account_info["Banned"]
     if not account.verify_password(entered_pass):
         print("Invalid Password")
         return
@@ -186,9 +191,7 @@ def account_menu(account):
         if choice == "1":
             print(f"Your Current Balance is: ${account.balance:.2f}")
         elif choice == "2":
-            pass
-        elif choice == "3":
-            pass
+            local_transfer(account)
         elif choice == "3":
             print(f"Your International Phone Number is: +252{account.phone}")
             print(f"Your Local Phone Number is: 0{account.phone}")
@@ -544,6 +547,7 @@ def cbos_menu(account, binfo):
         print("2. Transfer Money")
         print("3. Deposit Money From EVCplus Wallet")
         print("4. Withdraw Money To EVCplus Wallet")
+        print("5. Change Bank PIN")
         print("0. Exit Menu")
         choice = input("Choose a Service: ")
 
@@ -555,6 +559,8 @@ def cbos_menu(account, binfo):
         elif choice == "3":
             pass
         elif choice == "4":
+            cbos_withdraw(account, binfo)
+        elif choice == "6":
             pass
         elif choice == "0":
             print("Exiting the Menu...")
@@ -635,5 +641,129 @@ def cbos_transfer(account, binfo):
         f"Your Remaining Bank Balance: "
         f"${sender_bank['Account_Balance']:.2f}"
     )
+
+def local_transfer(account):
+    data = load()
+
+    own = next(
+        (
+        user
+        for user in data
+        if user["Username"] == account.username), None
+    )
+    if own is None:
+        print("Account Was Not Found")
+        return
+    sender_acc = own
+    current_pin = input("Enter Your PIN: ")
+    if current_pin != sender_acc["PIN"]:
+        print("Incorrect PIN.")
+        return
+    local_acc = input("Enter Phone Number: ")
+    if not local_acc.isdigit() or len(local_acc) != 9 or len(local_acc) > 9:
+        print("Invalid Phone Number, Please Use this Format: (61XXXXXXX).")
+        return
+    if local_acc == sender_acc["Phone_Number"]:
+        print("You Can't Transfer Money To Your Self.")
+        return
+
+    # Recievers Account Check
+    receive = None
+    for user in data:
+        if user["Phone_Number"] == local_acc:
+            receive = user
+            break
+    if receive is None:
+        print("Account Was Not Found.")
+        return
+    if receive["Banned"]:
+        print("Recipient's Account is Suspended, Therefore, You Cannot Transfer Money.")
+        return
+
+    try:
+        amount = float(input("Enter an Amount: "))
+    except ValueError:
+        print("Amount Must Be A Number.")
+        return
+    if amount <= 0:
+        print("Amount Must Be Greater Than Zero.")
+        return
+    if amount > sender_acc["Balance"]:
+        print("Insufficient Balance.")
+        return
+
+    print(f"\nRecipient's Name: {receive['Name']}")
+    print(f"Phone Number: {receive['Phone_Number']}")
+    print(f"Amount: ${amount:.2f}")
+    ask = input(f"Are You Sure to Transfer ${amount:.2f} to Mr.{receive['Name']} - {receive['Phone_Number']} ?: ").lower()
+    if ask != "y":
+        print("Transfer Cancelled.")
+        return
+
+    sender_acc["Balance"] -= amount
+    account.balance = sender_acc["Balance"]
+    receive["Balance"] += amount
+    save(data)
+
+    print("\nTransfer Successful!")
+    print(f"You Have Successfully Transferred ${amount:.2f} to Mr.{receive['Name']} "
+          f"with the Phone Number: {receive['Phone_Number']}")
+    print(f"Your Current Balance is: ${sender_acc['Balance']:.2f}")
+
+def cbos_withdraw(account, binfo):
+    data = load()
+
+    owner = next(
+        (
+            user
+            for user in data
+            if user["Username"] == account.username), None
+    )
+
+    own = next(
+        (
+            gold
+            for gold in data
+            if gold["Username"] == account.username), None
+    )
+    if owner is None or not owner["Misc"]:
+        print("Account Was Not Found.")
+        return
+    sender = owner["Misc"][0]
+    send = own
+    pin = input("Enter Your Bank PIN: ")
+    if pin != sender["Account_PIN"]:
+        print("Incorrect PIN.")
+        return
+
+    try:
+        amount = float(input("Enter Amount To Transfer: "))
+    except ValueError:
+        print("Amount Must Be A Number.")
+        return
+    if amount <= 0:
+        print("Amount Must Be Greater Than Zero.")
+        return
+
+    if amount > sender["Account_Balance"]:
+        print("Insufficient Bank Balance.")
+        return
+
+    if sender["Account_Lock"]:
+        print("Your Account Is Currently Suspended.")
+        return
+    ask = input(f"Are you sure to withdraw ${amount:.2f} from Your Bank account {sender['Account_Number']} (Y/N)?: ").lower()
+    if ask != "y":
+        print("Withdraw Was Cancelled.")
+        return
+
+    own["Balance"] += amount
+    sender["Account_Balance"] -= amount
+    account.balance = own["Balance"]
+    binfo.bank_balance = sender["Account_Balance"]
+    save(data)
+
+    print(f"${account.balance:.2f}")
+    print(f"${binfo.bank_balance:.2f}")
 
 main()
