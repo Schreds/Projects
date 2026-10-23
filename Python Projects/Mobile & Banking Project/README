@@ -16,3 +16,23 @@ after your create your account, it will be saved inside test.json file and it wi
 
 Why am i adding this project inside the old project?
 Because i wanna look back in the future and tell my self, "You have come along way studying" and to compare my beginner codes with my current prgoress.
+
+**---Features---**
+
+**New Features**: 
+1. Local Money Transfer: You Can now transfer money to another exiting account by the phone number (NEW)
+2. CBOS Banking, Bank-to-Bank Transfers: You Can now transfer money from your bank account to another exiting bank account (NEW)
+3. Bank Withdraw: You Can withdraw the money inside your CBOS Bank Balance into the Local Mobile Balance (NEW)
+4. Account Suspension: if both, the bank and the Local Money Account are suspended, you can no longer use them (NEW)
+5. Each User can now create a separate bank account if they don't have an existing bank account and there is $10 fee for opening the account,
+and once they open an account, they cannot open a second one (NEW)
+6. Everything is Saved in the JSON file such as: Usernames, passwords, Pins, balance, and basic user information.
+
+**Coming Features**:
+1. Deposit Money From the Local Money into the Bank Account
+2. Bank PIN change
+
+The only thing left if Just these two and the project will be completed 100%
+
+I can say that I'm comfortable with Object Oriented Programming and learned a lot in the in the process of building projects and discovering new things
+that i can use and implement it in my projects.
